@@ -417,11 +417,24 @@ marquee{
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
   }
-  .form-style-10 .privacy-policy{
-    float: right;
-    width: 250px;
-    font: 12px Arial, Helvetica, sans-serif;
-    color: #4D4D4D;
-    margin-top: 10px;
-    text-align: right;
-  }
+
+
+ @media screen and (max-width: 1200px) {
+    .form-style-10 {
+      width: calc( 100% - 30px);
+      max-width: 80%; } }
+  @media screen and (min-width: 1024px) {
+    .form-style-10 {
+      max-width: 1200px; } }
+  @media screen and (max-width: 768px) {
+    .form-style-10{
+      flex-direction: column;
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+      -o-flex-direction: column;
+      -ms-flex-direction: column;
+      justify-content: center;
+      -moz-justify-content: center;
+      -webkit-justify-content: center;
+      -o-justify-content: center;
+      -ms-justify-content: center; }}
