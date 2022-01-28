@@ -154,52 +154,44 @@
             
                    
                    }
-                
-                
-             function  password()
-             { 
-                var user = document.getElementById("pass").value;
-                var user2 = document.getElementById("pass");
-                var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/;
-                 if (user == "")
-                 {
-        
-                    span[6].innerText="Blank password***";
-                    user2.style.border="2px red solid";
-                    return false;
-                                } 
-                else if (re.test(user))// && ( user.trim().length < 7 && user != "" ))
-                 {   
+                              
+function password()
+{ 
+    var user = document.getElementById("pass").value;
+    var user2 = document.getElementById("pass");
 
-                      if(  user.trim().length < 8 && user != "" )
-
-                      {
-                    span[6].innerText = 'Weak Password';
-                    user2.style.border="1px green solid";
-                      }
-
-                      
-                     
-                    else if (user.trim().length >= 8 && user.trim().length <=15) {
-                    span[6].innerText = 'Strong Password';
-                    user2.style.border="1px green solid";
-                    }
-                    else{
-                    span[6].innerText = 'Too long Password';
-                    
-                    } }
-                 else {
-                  
-                         user2.style.border = "red solid 2px";
-                         span[6].innerText="Invalid password***";
-                         user2.style.border="2px red solid";
-                         //alert("Password must contain : "+  "\n" + "1.minimum of 1 lower case letter [a-z]"+ "\n"  +"2. minimum of 1 upper case letter [A-Z]"+ "\n" +"3. minimum of 1 numeric character [0-9]" + "\n" + " 4.1 special character ");
-                         return false;
-                     } 
-         }
-            
-
-        
+    var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,20})/;
+    if (user == "" || user == null)
+    {
+        span[6].innerText="Blank password***";
+        user2.style.border="2px red solid";
+        return false;
+    } 
+    else if(re.test(user.trim()))
+    {
+        if(user.trim().length >= 8 && user.trim().length <= 15)
+        {
+            span[6].innerText="Strong password***";
+            user2.style.border = "2px green solid";
+            return true;
+        }
+        else if(user.trim().length > 15)
+        {
+            span[6].innerText = "Too long password***";
+            user2.style.border = "4px yellow solid";
+            return false;
+        }
+    }
+    else
+    {
+        span[6].innerText="Weak Password***";
+        user2.style.border = "4px blue solid";
+        return false;
+    }
+    
+}
+  
+             
 
 
 
