@@ -64,7 +64,7 @@
                               
                                 if (user == "") {
                                 span[3].innerText="Blank email***";
-                                user2.style.border="2.5px red solid";
+                                user2.style.border="3px red solid";
                                 //alert("Email must be filled out");
                                 return false;
                                 }
@@ -73,7 +73,7 @@
                                 if (re.test(user)) {
                                     span[3].innerText = 'Valid';
                                     
-                                    user2.style.border="1px green solid";
+                                    user2.style.border="3px green solid";
                         
             
             
@@ -84,7 +84,7 @@
                                 else {
             
                                     span[3].innerText="Incorrect Email id";
-                                 user2.style.border="1px red solid";
+                                 user2.style.border="3px red solid";
                                    return false;
                                      }
                             }
@@ -102,7 +102,7 @@
                               
                                 
                                 span[4].innerText="Blank phone number***";
-                                user2.style.border="2px red solid";
+                                user2.style.border="3px red solid";
                                 //alert("Email must be filled out");
                                 return false;
                                
@@ -111,7 +111,7 @@
                       {
                         span[4].innerText = 'Valid';
                                     
-                         user2.style.border="1px green solid";
+                         user2.style.border="3px green solid";
                         
                           
                           return true;
@@ -120,7 +120,7 @@
                         
                       else {
                     
-                          user2.style.border = "red solid 2px";
+                          user2.style.border = "red solid 3px";
                           span[4].innerText="Phone no should be of 10 digits";
                           
                           return false;
@@ -133,20 +133,20 @@
                 var re = /^[a-zA-Z ]*$/;
                 
                 if (user == "") {span[1].innerText="Blank name***";
-                                user2.style.border="2px red solid";
+                                user2.style.border="3px red solid";
                                
                                 return false;
                                 } 
                 if (re.test(user) ) {
                     span[1].innerText = 'Valid';
                                     
-                                    user2.style.border="1px green solid";
+                                    user2.style.border="3px green solid";
                         
                         validateEmail();
                        
                     }
                 else {    
-                          user2.style.border = "red solid 2px";
+                          user2.style.border = "red solid 3px";
                           span[1].innerText="Name should contain only alphabets";
                           return false;
                         
@@ -164,7 +164,7 @@ function password()
     if (user == "" || user == null)
     {
         span[6].innerText="Blank password***";
-        user2.style.border="2px red solid";
+        user2.style.border="3px red solid";
         return false;
     } 
     else if(re.test(user.trim()))
@@ -172,13 +172,13 @@ function password()
         if(user.trim().length >= 8 && user.trim().length <= 15)
         {
             span[6].innerText="Strong password***";
-            user2.style.border = "2px green solid";
+            user2.style.border = "3px green solid";
             return true;
         }
         else if(user.trim().length > 15)
         {
             span[6].innerText = "Too long password***";
-            user2.style.border = "4px yellow solid";
+            user2.style.border = "3px yellow solid";
             return false;
         }
     }
