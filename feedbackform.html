@@ -277,14 +277,14 @@ header{background-color:#111E80 ;}
             <form>
                 <div class="section"><span>1</span>First Name & Address</div>
                 <div class="inner-wrap">
-                    <label> <input type="text" name="field1" id=name placeholder="Your Name" onkeypress="allLetter()" onkeydown=" return test(event)" /><span style="color: black;"></span></label>
+                    <label> <input type="text" name="field1" id=name placeholder="Your Name" onkeyup="allLetter()" onkeydown=" return test(event)" /><span style="color: black;"></span></label>
                     <label> <input type="text"name="field2" placeholder="Your Address"></textarea></label>
                 </div>
             
                 <div class="section"><span>2</span>Email & Phone</div>
                 <div class="inner-wrap">
-                    <label> <input type="email" name="field3" id="email" placeholder="Your Email-id" onkeypress="validateEmail()"/><span style="color: black;"></span></label>
-                    <label><input type="text" name="field4" id="phone" placeholder="Your Phone no" onkeypress="validatePhone()"onkeydown=" return test2(event)"/><span style="color: black;"></span></label>
+                    <label> <input type="email" name="field3" id="email" placeholder="Your Email-id" onkeyup="validateEmail()"/><span style="color: black;"></span></label>
+                    <label><input type="text" name="field4" id="phone" placeholder="Your Phone no" onkeyup="validatePhone()"onkeydown=" return test2(event)"/><span style="color: black;"></span></label>
                 </div>
             
                 <div class="section"><span>3</span>Password</div>
@@ -331,7 +331,7 @@ header{background-color:#111E80 ;}
                 <div class="button-section">
                     <input type="submit" name="signup" id="signup" class="form-submit" value="Submit" onclick="validate(); return false ;scrollToTop()" />
 
-                    <input type="submit" name="signup" id="signup" class="form-submit" value="Reload" onclick="reload()"/>
+                    <input type="submit" name="signup" id="signup" class="form-submit" value="Reload" onclick="reload();scrollToTop()"/>
 
                  
               
